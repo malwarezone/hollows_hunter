@@ -19,6 +19,7 @@ configuration:
   - Debug
   
 environment:
+  fast_finish: true
   matrix:
     - env_arch: "x64"
     - env_arch: "x86"
@@ -43,7 +44,7 @@ after_test:
   - dir
   
 artifacts:
-  - path: .
+  - path: "C:\projects\hollows-hunter\build"
     name: test.zip
  
   
