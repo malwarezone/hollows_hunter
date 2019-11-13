@@ -39,6 +39,8 @@ after_test:
   - dir
   
 artifacts:
-  - path: MyProject\bin\$(configuration)
+  - path: test.zip
+    name: hollows_hunter.exe
+    name: pe-sieve.dll
   
   
