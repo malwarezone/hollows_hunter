@@ -18,8 +18,10 @@ build:
 configuration:
   - Debug
   
-environment:
+matrix:
   fast_finish: true
+  
+environment:
   matrix:
     - env_arch: "x64"
     - env_arch: "x86"
