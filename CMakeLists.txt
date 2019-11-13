@@ -53,6 +53,6 @@ if(HH_BUILD_TESTING)
 	enable_testing()
 
 	# 0) does the application run
-	add_test (TestRuns ${CMAKE_BINARY_DIR}/hollows_hunter "/json /hooks")
-	set_tests_properties(TestRuns PROPERTIES PASS_REGULAR_EXPRESSION "\"susipcious_count\" : 0")
+	add_test (TestRuns ${CMAKE_BINARY_DIR}/hollows_hunter "/json" "/hooks")
+	set_tests_properties(TestRuns PROPERTIES PASS_REGULAR_EXPRESSION "\"susipcious_count\" : ")
 endif()
