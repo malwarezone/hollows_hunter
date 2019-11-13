@@ -43,4 +43,5 @@ artifacts:
   - path: build
     name: test
  
-  
+on_failure:
+- ps: Push-AppveyorArtifact test
