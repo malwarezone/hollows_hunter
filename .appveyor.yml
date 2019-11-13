@@ -43,6 +43,7 @@ after_test:
   - dir
   
 artifacts:
-  - name: test.zip
+  - path: .
+    name: test.zip
  
   
