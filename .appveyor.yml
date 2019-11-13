@@ -37,14 +37,12 @@ build_script:
     
 test_script:
   - ctest -V
-
-after_test:
-  - dir
   
 artifacts:
   - path: build
     name: build
  
 on_failure:
-- 7z a failed.zip *
-- ps: Push-AppveyorArtifact failed.zip
+- dir
+- 7z a about_failed.zip scan_out
+- ps: Push-AppveyorArtifact about_failed.zip
