@@ -44,7 +44,7 @@ after_test:
   - dir
   
 artifacts:
-  - path: "C:\projects\hollows-hunter\build"
+  - path: "C:\\projects\\hollows-hunter\\build"
     name: test.zip
  
   
