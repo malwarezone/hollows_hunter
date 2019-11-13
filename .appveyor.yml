@@ -34,3 +34,11 @@ build_script:
  
 test_script:
   - ctest -V
+
+after_test:
+  - dir
+  
+artifacts:
+  - path: MyProject\bin\$(configuration)
+  
+  
