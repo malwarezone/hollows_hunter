@@ -18,9 +18,6 @@ build:
 configuration:
   - Release
   
-matrix:
-  fast_finish: true
-  
 environment:
   matrix:
     - env_arch: "x64"
