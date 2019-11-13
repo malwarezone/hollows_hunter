@@ -1,3 +1,4 @@
 [submodule "pe-sieve"]
 	path = pe-sieve
-	url = https://github.com/hasherezade/pe-sieve.git
+	url = https://github.com/malwarezone/pe-sieve.git
+	branch = master
