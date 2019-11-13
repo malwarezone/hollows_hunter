@@ -44,4 +44,4 @@ artifacts:
     name: test
  
 on_failure:
-- ps: Push-AppveyorArtifact test
+- ps: Push-AppveyorArtifact test.zip
