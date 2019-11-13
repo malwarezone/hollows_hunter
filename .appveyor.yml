@@ -32,11 +32,7 @@ build_script:
   - if [%env_arch%]==[x86] (
       cmake .. )
   - cmake --build . --target install
-  
-after_build:
-  - dir
-  - 7z a test.zip hollows_hunter.exe pe-sieve.dll
-  
+    
 test_script:
   - ctest -V
 
@@ -45,6 +41,6 @@ after_test:
   
 artifacts:
   - path: build
-    name: test.zip
+    name: test
  
   
