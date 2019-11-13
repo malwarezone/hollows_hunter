@@ -16,7 +16,7 @@ build:
   verbosity: detailed
 
 configuration:
-  - Debug
+  - Release
   
 matrix:
   fast_finish: true
@@ -43,8 +43,8 @@ after_test:
   
 artifacts:
   - path: build
-    name: test
+    name: build
  
 on_failure:
-- 7z a test.zip *
-- ps: Push-AppveyorArtifact test.zip
+- 7z a failed.zip *
+- ps: Push-AppveyorArtifact failed.zip
