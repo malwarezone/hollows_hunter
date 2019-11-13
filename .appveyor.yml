@@ -46,5 +46,5 @@ artifacts:
     name: build
  
 on_failure:
-- 7z a failed.zip scan_out//*
+- 7z a failed.zip *
 - ps: Push-AppveyorArtifact failed.zip
