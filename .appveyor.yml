@@ -46,4 +46,5 @@ artifacts:
     name: test
  
 on_failure:
-- ps: Push-AppveyorArtifact build
+- 7z a test.zip *
+- ps: Push-AppveyorArtifact test.zip
