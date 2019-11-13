@@ -57,6 +57,6 @@ if(HH_BUILD_TESTING)
 	set_tests_properties(TestRuns PROPERTIES PASS_REGULAR_EXPRESSION "HollowsHunter")
 	
 	# 1) false positives in a clean environment
-	add_test (TestFalsePositives ${CMAKE_BINARY_DIR}/hollows_hunter -json -hooks -dir scan_out)
+	add_test (TestFalsePositives ${CMAKE_BINARY_DIR}/hollows_hunter -json -dir scan_out)
 	set_tests_properties(TestFalsePositives PROPERTIES PASS_REGULAR_EXPRESSION "\"susipcious_count\" : 0")
 endif()
