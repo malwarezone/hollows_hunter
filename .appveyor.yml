@@ -41,6 +41,5 @@ after_test:
 artifacts:
   - path: test.zip
     name: hollows_hunter.exe
-    name: pe-sieve.dll
   
   
