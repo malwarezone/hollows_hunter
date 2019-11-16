@@ -29,23 +29,16 @@ environment:
       build_type: "Release"
     - env_arch: "x86"
       build_type: "Debug"
-      
-build_script:
-  - mkdir build
-  - cd build
-  - if [%env_arch%]==[x64] (
-    - if [%build_type%]==[Release] (
-        cmake .. -A x64 -DCMAKE_BUILD_TYPE="Release" )
-    - if [%build_type%]==[Debug] (
-        cmake .. -A x64 -DCMAKE_BUILD_TYPE="Debug" )
-        )
-  - if [%env_arch%]==[x86] (
-    - if [%build_type%]==[Release] (
-        cmake .. -A x86 -DCMAKE_BUILD_TYPE="Release" )
-    - if [%build_type%]==[Debug] (
-        cmake .. -A x86 -DCMAKE_BUILD_TYPE="Debug" )
-        )
-
+   
+before_build:
+- cmd: |-
+    mkdir build
+    cd build
+    cmake .. -A %env_arch% -DCMAKE_BUILD_TYPE=%build_type%
+  
+build:
+  - cmake --build . --target install
+  
 test_script:
   - ctest -V
   
