@@ -21,13 +21,7 @@ install:
 environment:
   matrix:
     - env_arch: "x64"
-      build_type: "Release"
-    - env_arch: "x64"
-      build_type: "Debug"
     - env_arch: "x86"
-      build_type: "Release"
-    - env_arch: "x86"
-      build_type: "Debug"
 
 before_build:
   - mkdir build
@@ -38,7 +32,7 @@ before_build:
     cmake .. )
   
 build_script:
-  - cmake --build . --config %build_type% --target install
+  - cmake --build . --config %CONFIGURATION% --target install
 
 test_script:
   - ctest -V
