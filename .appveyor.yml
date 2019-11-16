@@ -1,10 +1,16 @@
 os:
   - Visual Studio 2015
-  
-platform: x64
+
+platform:
+  - x86
   - x64
   
-configuration: Release
+configuration:
+  matrix:
+  - Debug
+    conf: "Debug"
+  - Release
+    conf: "Release"
   
 branches:
   only:
