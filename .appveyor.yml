@@ -6,11 +6,8 @@ platform:
   - x64
   
 configuration:
-  matrix:
   - Debug
-    conf: "Debug"
   - Release
-    conf: "Release"
   
 branches:
   only:
