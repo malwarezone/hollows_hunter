@@ -16,9 +16,6 @@ install:
   - git submodule update --init --recursive
   - set PATH=C:\Program Files\CMake\bin;%PATH%
 
-build:
-  verbosity: detailed
-  
 environment:
   matrix:
     - env_arch: "x64"
@@ -37,6 +34,7 @@ before_build:
     cmake .. -A %env_arch% -DCMAKE_BUILD_TYPE=%build_type%
   
 build:
+  verbosity: detailed
   - cmake --build . --target install
   
 test_script:
