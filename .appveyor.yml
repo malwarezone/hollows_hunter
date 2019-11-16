@@ -34,9 +34,9 @@ build_script:
   - mkdir build
   - cd build
   - if [%env_arch%]==[x64] (
-      cmake .. -A x64 -DCMAKE_BUILD_TYPE=%build_type% )
+      cmake .. -A x64 -DCMAKE_BUILD_TYPE=[%build_type%] )
   - if [%env_arch%]==[x86] (
-      cmake .. -DCMAKE_BUILD_TYPE=%build_type% )
+      cmake .. -DCMAKE_BUILD_TYPE=[%build_type%] )
   - cmake --build . --target install
     
 test_script:
