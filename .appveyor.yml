@@ -28,13 +28,11 @@ environment:
       build_type: "Release"
     - env_arch: "x86"
       build_type: "Debug"
-   
+
 before_build:
-- cmd: |-
-    mkdir build
-    cd build
-    mkdir %build_type%
-    cmake .. -A %env_arch% 
+  - mkdir build
+  - cd build
+  - cmake .. -A %env_arch%
   
 build_script:
   - cmake --build . --config %build_type% --target install
