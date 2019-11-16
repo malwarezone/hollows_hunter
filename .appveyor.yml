@@ -6,7 +6,6 @@ platform:
   - x64
   
 configuration:
-  - Debug
   - Release
   
 branches:
@@ -24,14 +23,19 @@ environment:
   matrix:
     - env_arch: "x64"
     - env_arch: "x86"
+    
+environment:
+  matrix:
+    - build_type: "Release"
+    - build_type: "Debug"
   
 build_script:
   - mkdir build
   - cd build
   - if [%env_arch%]==[x64] (
-      cmake .. -A x64 )
+      cmake .. -A x64 -DCMAKE_BUILD_TYPE=%build_type% )
   - if [%env_arch%]==[x86] (
-      cmake .. )
+      cmake .. -DCMAKE_BUILD_TYPE=%build_type% )
   - cmake --build . --target install
     
 test_script:
