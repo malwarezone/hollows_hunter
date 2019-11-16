@@ -11,7 +11,10 @@ configuration:
 branches:
   only:
     - master
-
+    
+build:
+  verbosity: detailed
+  
 install:
   - git submodule update --init --recursive
   - set PATH=C:\Program Files\CMake\bin;%PATH%
@@ -33,13 +36,12 @@ before_build:
     cd build
     cmake .. -A %env_arch% -DCMAKE_BUILD_TYPE=%build_type%
   
-build:
-  verbosity: detailed
+build_script:
   - cmake --build . --target install
-  
+
 test_script:
   - ctest -V
-  
+
 artifacts:
   - path: build
     name: build
