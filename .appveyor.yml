@@ -4,6 +4,8 @@ os:
 platform: x64
   - x64
   
+configuration: Release
+  
 branches:
   only:
     - master
@@ -14,9 +16,6 @@ install:
 
 build:
   verbosity: detailed
-
-configuration:
-  - Release
   
 environment:
   matrix:
