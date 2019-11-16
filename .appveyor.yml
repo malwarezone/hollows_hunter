@@ -34,8 +34,8 @@ before_build:
 - cmd: |-
     mkdir build
     cd build
-    mkdir Release
-    mkdir Debug
+    mkdir %build_type%
+    cd %build_type%
     cmake .. -A %env_arch% --config %build_type%
   
 build_script:
