@@ -19,8 +19,8 @@ install:
   - set PATH=C:\Program Files\CMake\bin;%PATH%
 
 environment:
-  - artifactName: $(APPVEYOR_PROJECT_NAME)-$(APPVEYOR_REPO_COMMIT)
-  - matrix:
+  artifactName: $(APPVEYOR_PROJECT_NAME)-$(APPVEYOR_REPO_COMMIT)
+  matrix:
     - env_arch: "x64"
     - env_arch: "x86"
 
