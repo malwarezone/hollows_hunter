@@ -34,7 +34,7 @@ before_build:
 - cmd: |-
     mkdir build
     cd build
-    cmake .. -A %env_arch% -DCMAKE_BUILD_TYPE=%build_type%
+    cmake .. -A %env_arch% --config %build_type%
   
 build_script:
   - cmake --build . --target install
