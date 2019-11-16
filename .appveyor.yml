@@ -19,6 +19,7 @@ install:
   - set PATH=C:\Program Files\CMake\bin;%PATH%
 
 environment:
+    artifactName: $(APPVEYOR_PROJECT_NAME)-$(APPVEYOR_REPO_COMMIT)
   matrix:
     - env_arch: "x64"
     - env_arch: "x86"
@@ -34,12 +35,16 @@ before_build:
 build_script:
   - cmake --build . --config %CONFIGURATION% --target install
 
+after_build:
+  - mkdir %artifactName%
+  - cp *.exe %artifactName%
+  - cp *.dll %artifactName%
+
 test_script:
   - ctest -V
 
 artifacts:
-  - path: build
-    name: build
+  - path: build\%artifactName%
  
 on_failure:
 - dir
