@@ -32,7 +32,10 @@ environment:
 before_build:
   - mkdir build
   - cd build
-  - cmake .. -A %env_arch%
+  - if [%env_arch%]==[x64] (
+      cmake .. -A x64 )
+  - if [%env_arch%]==[x86] (
+cmake .. )
   
 build_script:
   - cmake --build . --config %build_type% --target install
