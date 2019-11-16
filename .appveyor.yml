@@ -23,8 +23,6 @@ environment:
   matrix:
     - env_arch: "x64"
     - env_arch: "x86"
-    
-environment:
   matrix:
     - build_type: "Release"
     - build_type: "Debug"
