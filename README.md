@@ -1,5 +1,5 @@
 # hollows_hunter
-[![Build status](https://ci.appveyor.com/api/projects/status/xv4f8e7qbhyujt48?svg=true)](https://ci.appveyor.com/project/malwarezone/hollows-hunter)
+![Build status](https://ci.appveyor.com/api/projects/status/cqn2fuice77lrs3i?svg=true)](https://ci.appveyor.com/project/malwarezone/hollows-hunter)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![GitHub release](https://img.shields.io/github/release/hasherezade/hollows_hunter.svg)](https://github.com/hasherezade/hollows_hunter/releases)
 [![Github All Releases](https://img.shields.io/github/downloads/hasherezade/hollows_hunter/total.svg)](http://www.somsubhra.com/github-release-stats/?username=hasherezade&repository=hollows_hunter)
