@@ -3,6 +3,7 @@ os:
 
 platform:
   - x64
+  - x86
   
 configuration:
   - Release
@@ -27,10 +28,6 @@ environment:
 before_build:
   - mkdir build
   - cd build
-  - if [%env_arch%]==[x64] (
-    cmake .. -A x64 )
-  - if [%env_arch%]==[x86] (
-    cmake .. )
   - cmake -DPESIEVE_AS_STATIC_LIB:BOOL=ON ..
   
 build_script:
