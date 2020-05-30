@@ -21,9 +21,6 @@ install:
 
 environment:
   artifactName: $(APPVEYOR_PROJECT_NAME)-$(APPVEYOR_REPO_COMMIT)
-  matrix:
-    - env_arch: "x64"
-    - env_arch: "x86"
 
 before_build:
   - mkdir build
