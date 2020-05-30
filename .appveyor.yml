@@ -31,7 +31,7 @@ before_build:
     cmake .. -A x64 )
   - if [%env_arch%]==[x86] (
     cmake .. )
-  - cmake -DPESIEVE_AS_STATIC_LIB:ON ..
+  - cmake -DPESIEVE_AS_STATIC_LIB:BOOL=ON ..
   
 build_script:
   - cmake --build . --config %CONFIGURATION% --target install
