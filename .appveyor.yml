@@ -26,7 +26,7 @@ before_build:
   - mkdir build
   - cd build
   - cmake ..
-  - cmake .. -DPESIEVE_AS_STATIC_LIB:BOOL=ON
+  - cmake -D -DPESIEVE_AS_STATIC_LIB=ON ..
   
 build_script:
   - cmake --build . --config %CONFIGURATION% --target install
