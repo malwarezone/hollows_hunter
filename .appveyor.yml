@@ -25,7 +25,6 @@ environment:
 before_build:
   - mkdir build
   - cd build
-  - cmake ..
   - cmake -D -DPESIEVE_AS_STATIC_LIB=ON ..
   
 build_script:
