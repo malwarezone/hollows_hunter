@@ -28,7 +28,7 @@ before_build:
   - cmake -DPESIEVE_AS_STATIC_LIB:BOOL=ON ..
   
 build_script:
-  - cmake --build . --config %CONFIGURATION% --target install
+  - cmake -DPESIEVE_AS_STATIC_LIB:BOOL=ON --build . --config %CONFIGURATION% --target install
 
 after_build:
   - mkdir %artifactName%
